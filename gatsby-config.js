@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Kinnas House of Love`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://kinnashouseoflove.com`,
   },
   plugins: [
     {
