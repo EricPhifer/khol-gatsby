@@ -21,14 +21,13 @@ const GlobalStyles = createGlobalStyle`
 }
 
   :root {
-    --white: #fff;
-    --blue: #1777BE;
-    --gold: #C39F4D;
-    --black: #1B0F07;
-    --darkgray: #EFEFEF;
-    --lightgray: #1B0F07;
-    --orange: #FFBF2E;
+    --gold: #FFBF2E;
+    --white: #EFEFEF;
     --red: #9E1E1B;
+    --orange: #C39F4D;
+    --darkgray: #585858;
+    --blue: #1777BE;
+    --black: #1B0F07;
   }
   html {
     // background-image: url();
@@ -38,12 +37,17 @@ const GlobalStyles = createGlobalStyle`
     // background-attachment: fixed;
     font-size: 10px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
   }
 
   html, body {
     min-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
+  }
+
+  body {
+    overflow-y: hidden;
   }
 
   button {

@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 const Typography = createGlobalStyle`
   html {
-    font-family: "Bodoni 72 Smallcaps", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;;
+    font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
     color: #000;
   }
 
