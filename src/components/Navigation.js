@@ -48,7 +48,7 @@ const Nav = styled.nav`
 `
 
 const Img = styled(Link)`
-  width: 20rem;
+  width: 25rem;
   margin: 1rem;
   display: flex;
   justify-content: center;
