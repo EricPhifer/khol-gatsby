@@ -62,25 +62,38 @@ const IndexPage = () => (
       <HR />
       {/* 
       <About />
+    */}
       <H2 id="partners">Our Partners</H2>
       <HR />
+      {/* 
       <Partners />
+    */}
       <H2 id="events">Events</H2>
       <HR />
+      {/* 
       <PastEvents />
+    */}
       <H2 id="testimonials">Testimonials</H2>
       <HR />
+      {/* 
       <Testimonials />
       <TestimonialForm />
+    */}
       <H2 id="volunteer">Volunteer</H2>
       <HR />
+      {/* 
       <Volunteer />
+    */}
       <H2 id="connect">Connect</H2>
       <HR />
+      {/* 
       <Connect />
+    */}
       <H2 id="donate">Donate</H2>
       <HR />
-      <Donate /> */}
+      {/* 
+      <Donate /> 
+      */}
     </Main>
   </Layout>
 )
