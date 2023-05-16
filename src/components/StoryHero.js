@@ -24,9 +24,9 @@ const Container = styled.div`
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   color: var(--white);
-  text-align: center;
+  text-align: right;
   z-index: 10;
   h1,
   h2 {
@@ -46,10 +46,14 @@ const Container = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
+  font-family: 'Bodoni 72 Smallcaps';
   font-size: 8rem;
-  text-shadow: 0.1rem 0 0 var(--black), 0 0.1rem 0 var(--black),
-    -0.1rem 0 0 var(--black), 0 -0.1rem 0 var(--black);
+  line-height: 1;
+  .kinna {
+    font-family: 'Sarina';
+    font-size: 16rem;
+  }
   // Mobile view
   @media only screen and (max-width: 615px) {
     font-size: 3.75rem;
@@ -63,9 +67,11 @@ const Title = styled.h1`
 
 const Motto = styled.h2`
   margin: 0;
-  font-size: 3rem;
-  text-shadow: 0.1rem 0 0 var(--black), 0 0.1rem 0 var(--black),
-    -0.1rem 0 0 var(--black), 0 -0.1rem 0 var(--black);
+  font-family: 'Bodoni 72 Smallcaps';
+  font-size: 3.5rem;
+  .address {
+    font-size: 3rem;
+  }
   // Mobile view
   @media only screen and (max-width: 615px) {
     font-size: 2rem;
@@ -116,8 +122,16 @@ export default function StoryHero() {
             <div />
           )}
           <Container>
-            <Title>{node.title}</Title>
-            <Motto>{node.tagline}</Motto>
+            <Title>
+              <span className="kinna">Kinnas</span>
+              <br />
+              {node.title}
+            </Title>
+            <Motto>
+              {node.tagline}
+              <br />
+              <span className="address">1 Corinthians 16:14</span>
+            </Motto>
           </Container>
         </Header>
       ))}
