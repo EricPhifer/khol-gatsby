@@ -4,14 +4,12 @@ import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 // Story Components
 import StoryHero from '../components/StoryHero'
+// Body Components
 import About from '../components/About'
-import Partners from '../components/Partners'
-// // Body Components
-// import About from '../components/About'
 // import Connect from '../components/Connect'
 // import Donate from '../components/Donate'
-// import Partners from '../components/Partners'
-// import PastEvents from '../components/PastEvents'
+import Partners from '../components/Partners'
+import PastEvents from '../components/PastEvents'
 // import TestimonialForm from '../components/TestimonialForm'
 // import Testimonials from '../components/Testimonials'
 // import Volunteer from '../components/Volunteer'
@@ -68,9 +66,7 @@ const IndexPage = () => (
       <Partners />
       <H2 id="events">Events</H2>
       <HR />
-      {/* 
       <PastEvents />
-    */}
       <H2 id="testimonials">Testimonials</H2>
       <HR />
       {/* 
