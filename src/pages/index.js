@@ -4,6 +4,8 @@ import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 // Story Components
 import StoryHero from '../components/StoryHero'
+import About from '../components/About'
+import Partners from '../components/Partners'
 // // Body Components
 // import About from '../components/About'
 // import Connect from '../components/Connect'
@@ -60,14 +62,10 @@ const IndexPage = () => (
     <Main>
       <H2 id="about">About Us</H2>
       <HR />
-      {/* 
       <About />
-    */}
       <H2 id="partners">Our Partners</H2>
       <HR />
-      {/* 
       <Partners />
-    */}
       <H2 id="events">Events</H2>
       <HR />
       {/* 
