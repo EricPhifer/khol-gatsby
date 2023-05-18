@@ -55,6 +55,9 @@ const Logo = styled.li`
   border-radius: 1rem;
   flex: 0 0 100%;
   counter-increment: item;
+  &::marker {
+    font-size: 0%;
+  }
 `
 
 const Snapper = styled.div`
