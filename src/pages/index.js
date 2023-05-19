@@ -11,7 +11,7 @@ import About from '../components/About'
 import Partners from '../components/Partners'
 import PastEvents from '../components/PastEvents'
 import Testimonials from '../components/Testimonials'
-// import TestimonialForm from '../components/TestimonialForm'
+import TestimonialForm from '../components/TestimonialForm'
 // import Volunteer from '../components/Volunteer'
 
 const Hero = styled.div`
@@ -72,9 +72,7 @@ const IndexPage = () => (
       <H2 id="testimonials">Testimonials</H2>
       <HR />
       <Testimonials />
-      {/* 
       <TestimonialForm />
-    */}
       <H2 id="volunteer">Volunteer</H2>
       <HR />
       {/* 

@@ -56,8 +56,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 1.5rem auto;
     padding: 2rem 0;
     justify-content: center;
-    box-shadow: 3px 3px 10px black;
-    background: var(--orange);
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--black);
+    background: var(--blue);
     color: white;
     border: 0;
     border-radius: 40px;
@@ -73,7 +73,7 @@ const GlobalStyles = createGlobalStyle`
     &:hover {
       background: #fff;
       a {
-        color: var(--orange);
+        color: var(--blue);
       }
     }
   }
