@@ -9,7 +9,7 @@ const CopyStyles = styled.footer`
   align-items: center;
   text-align: center;
   position: absolute;
-  bottom: 3rem;
+  bottom: 0;
   background-color: var(--black);
   font-weight: 600;
   color: white;

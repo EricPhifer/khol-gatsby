@@ -6,13 +6,14 @@ import Layout from '../components/Layout'
 import StoryHero from '../components/StoryHero'
 // Body Components
 import About from '../components/About'
+import Social from '../components/Social'
+import Donate from '../components/Donate'
 import Connect from '../components/Connect'
-// import Donate from '../components/Donate'
 import Partners from '../components/Partners'
+import Volunteer from '../components/Volunteer'
 import PastEvents from '../components/PastEvents'
 import Testimonials from '../components/Testimonials'
 import TestimonialForm from '../components/TestimonialForm'
-import Volunteer from '../components/Volunteer'
 
 const Hero = styled.div`
   display: block;
@@ -79,11 +80,10 @@ const IndexPage = () => (
       <H2 id="connect">Connect</H2>
       <HR />
       <Connect />
+      <Social />
       <H2 id="donate">Donate</H2>
       <HR />
-      {/* 
-      <Donate /> 
-      */}
+      <Donate />
     </Main>
   </Layout>
 )
