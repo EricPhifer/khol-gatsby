@@ -63,8 +63,8 @@ const GlobalStyles = createGlobalStyle`
     border-radius: 40px;
     cursor: pointer;
     --cast: 2px;
-    text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
-    transition: all 0.05s;
+    box-shadow: 0.5rem 0.5rem 0rem rgba(0,0,0,0.2);
+    transition: all 0.1s ease-in-out;
     a {
       text-decoration: none;
       color: white;
@@ -72,9 +72,8 @@ const GlobalStyles = createGlobalStyle`
     }
     &:hover {
       background: #fff;
-      a {
-        color: var(--blue);
-      }
+      color: var(--blue);
+      box-shadow: -0.1rem -0.1rem 1rem rgba(0,0,0,0.2);
     }
   }
   .gatsby-image-wrapper img[src*=base64\\,] {

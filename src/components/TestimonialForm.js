@@ -57,7 +57,9 @@ const Submit = styled.button`
   background: var(--blue);
   color: var(--white);
   border-radius: 1rem;
-  font-size: 1.85rem;
+  font-size: 2rem;
+  font-variant: small-caps;
+  font-weight: 700;
   &:focus {
     border: 0.2rem dotted var(--blue);
   }
