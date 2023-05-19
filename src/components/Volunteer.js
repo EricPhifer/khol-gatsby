@@ -1,4 +1,3 @@
-// import { graphql, useStaticQuery } from 'gatsby'
 import * as React from 'react'
 import styled from 'styled-components'
 import useContact from '../utils/useContact'
@@ -164,15 +163,6 @@ const Submit = styled.button`
 `
 
 export default function Volunteer() {
-  // const { volunteer } = useStaticQuery(graphql`
-  //   query {
-  //     volunteer: allSanityVolunteer {
-  //       nodes {
-  //         id
-  //       }
-  //     }
-  //   }
-  // `)
   const { values, updateValue } = useForm({
     name: '',
     email: '',
@@ -186,10 +176,9 @@ export default function Volunteer() {
   if (errMessage) {
     return <p>{errMessage}</p>
   }
-  // const { nodes } = volunteer
   return (
     <>
-      {/* {nodes.map(node => ( */}
+      {' '}
       <Form
         method="post"
         netlify-honeypot="bot-field"
@@ -324,7 +313,6 @@ export default function Volunteer() {
           Submit
         </Submit>
       </Form>
-      {/* ))} */}
     </>
   )
 }

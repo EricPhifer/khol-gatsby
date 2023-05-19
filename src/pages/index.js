@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import StoryHero from '../components/StoryHero'
 // Body Components
 import About from '../components/About'
-// import Connect from '../components/Connect'
+import Connect from '../components/Connect'
 // import Donate from '../components/Donate'
 import Partners from '../components/Partners'
 import PastEvents from '../components/PastEvents'
@@ -78,9 +78,7 @@ const IndexPage = () => (
       <Volunteer />
       <H2 id="connect">Connect</H2>
       <HR />
-      {/* 
       <Connect />
-    */}
       <H2 id="donate">Donate</H2>
       <HR />
       {/* 
