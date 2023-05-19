@@ -23,7 +23,8 @@ const Form = styled.form`
     text-align: center;
     margin-bottom: 3rem;
   }
-  button {
+  button.submit {
+    margin: 2rem 0;
     align-self: end;
   }
 `
@@ -116,7 +117,7 @@ export default function TestimonialForm() {
           required
         />
       </FullField>
-      <Submit type="submit" value="Submit">
+      <Submit type="submit" value="Submit" className="submit">
         Submit
       </Submit>
     </Form>

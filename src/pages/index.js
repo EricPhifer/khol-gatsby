@@ -12,7 +12,7 @@ import Partners from '../components/Partners'
 import PastEvents from '../components/PastEvents'
 import Testimonials from '../components/Testimonials'
 import TestimonialForm from '../components/TestimonialForm'
-// import Volunteer from '../components/Volunteer'
+import Volunteer from '../components/Volunteer'
 
 const Hero = styled.div`
   display: block;
@@ -75,9 +75,7 @@ const IndexPage = () => (
       <TestimonialForm />
       <H2 id="volunteer">Volunteer</H2>
       <HR />
-      {/* 
       <Volunteer />
-    */}
       <H2 id="connect">Connect</H2>
       <HR />
       {/* 

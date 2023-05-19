@@ -28,6 +28,9 @@ const GlobalStyles = createGlobalStyle`
     --darkgray: #585858;
     --blue: #1777BE;
     --black: #1B0F07;
+    --select-border: var(--darkgray);
+    --select-focus: var(--blue);
+    --select-arrow: var(--darkgray);
   }
   html {
     // background-image: url();
