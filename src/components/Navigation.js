@@ -54,7 +54,7 @@ const Img = styled(Link)`
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 815px) {
     width: 5rem;
   }
 `
@@ -159,6 +159,7 @@ const MenuContainer = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  background-color: var(--red);
   box-shadow: 0 0 1rem #85888c;
   transform-origin: 0% 0%;
   transform: translate(100%, 0%);

@@ -7,6 +7,7 @@ import StoryHero from '../components/StoryHero'
 // Body Components
 import About from '../components/About'
 import Social from '../components/Social'
+import Events from '../components/Events'
 import Donate from '../components/Donate'
 import Connect from '../components/Connect'
 import Partners from '../components/Partners'
@@ -67,6 +68,7 @@ const IndexPage = () => (
       <Partners />
       <H2 id="events">Upcoming Events</H2>
       <HR />
+      <Events />
       <H2>Past Events</H2>
       <HR />
       <PastEvents />

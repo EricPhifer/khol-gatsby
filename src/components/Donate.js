@@ -36,7 +36,7 @@ const GridItem = styled.a`
   }
 `
 
-export default function ThreeColumnGallery() {
+export default function Donate() {
   const { donate } = useStaticQuery(graphql`
     query {
       donate: allSanityDonate {

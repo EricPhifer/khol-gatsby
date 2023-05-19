@@ -54,9 +54,11 @@ const Input = styled.input`
 `
 
 const Title = styled.h3`
+  min-width: 20rem;
   color: var(--white);
   font-size: 2rem;
   text-transform: uppercase;
+  text-align: center;
 `
 
 const Blank = styled.div`

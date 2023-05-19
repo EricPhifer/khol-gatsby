@@ -32,15 +32,20 @@ const Container = styled.div`
   h2 {
     padding: 0 2rem;
   }
-  // Landscape view
-  @media only screen and (max-height: 600px) {
-    flex-flow: row wrap;
-    height: auto;
-    position: relative;
-    top: 5rem;
+  // Mobile view
+  @media only screen and (max-width: 750px) {
+    justify-content: normal;
+    margin-top: 3rem;
   }
-  @media only screen and (max-height: 600px) and (min-width: 884px) {
-    flex-flow: column wrap;
+  @media only screen and (max-width: 500px) {
+    margin-top: 7rem;
+  }
+  // Landscape view
+  @media only screen and (max-height: 950px) {
+    height: 60%;
+  }
+  @media only screen and (max-height: 950px) {
+    height: 77%;
   }
 `
 
@@ -50,18 +55,39 @@ const Title = styled.h1`
   font-family: 'Bodoni 72 Smallcaps';
   font-size: 8rem;
   line-height: 1;
+  text-shadow: 0.1rem 0 0 var(--darkgray), -0.1rem 0 0 var(--darkgray),
+    0 0.1rem 0 var(--darkgray), 0 -0.1rem 0 var(--darkgray);
   .kinna {
     font-family: 'Sarina';
     font-size: 16rem;
+    @media only screen and (max-width: 750px) {
+      font-size: 12rem;
+    }
+    @media only screen and (max-width: 615px) {
+      font-size: 10rem;
+    }
+    @media only screen and (max-width: 500px) {
+      font-size: 6rem;
+    }
   }
   // Mobile view
+  @media only screen and (max-width: 750px) {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+  }
   @media only screen and (max-width: 615px) {
-    font-size: 3.75rem;
+    font-size: 5rem;
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 3rem;
   }
   // Landscape view
   @media only screen and (max-height: 600px) {
     font-size: 3.75rem;
     margin: 0;
+    .kinna {
+      font-size: 7.5rem;
+    }
   }
 `
 
@@ -69,16 +95,30 @@ const Motto = styled.h2`
   margin: 0;
   font-family: 'Bodoni 72 Smallcaps';
   font-size: 3.5rem;
+  text-shadow: 0.1rem 0 0 var(--darkgray), -0.1rem 0 0 var(--darkgray),
+    0 0.1rem 0 var(--darkgray), 0 -0.1rem 0 var(--darkgray);
   .address {
     font-size: 3rem;
+    @media only screen and (max-width: 615px) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: 500px) {
+      font-size: 2rem;
+    }
   }
   // Mobile view
   @media only screen and (max-width: 615px) {
-    font-size: 2rem;
+    font-size: 3.5rem;
+  }
+  @media only screen and (max-width: 500px) {
+    font-size: 2.15rem;
   }
   // Landscape view
   @media only screen and (max-height: 600px) {
     font-size: 2rem;
+    .address {
+      font-size: 2rem;
+    }
   }
 `
 
@@ -138,3 +178,5 @@ export default function StoryHero() {
     </>
   )
 }
+
+// Image Source: Kevin Carden https://www.lightstock.com/photos/a-mother-and-daughter-in-prayer-at-bedtime

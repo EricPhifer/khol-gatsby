@@ -34,37 +34,20 @@ const GridItem = styled.a`
 
 // TODO: change allSanity to Social
 export default function Social() {
-  const { social } = useStaticQuery(graphql`
+  const { calendar } = useStaticQuery(graphql`
     query {
-      social: allSanityDonate {
+      calendar: allSanityTestimonials {
         nodes {
           id
-          alt
-          link
-          image {
-            asset {
-              id
-            }
-            ...ImageWithPreview
-          }
         }
       }
     }
   `)
-  const { nodes } = social
+  const { nodes } = calendar
   return (
     <Grid id="threeColumnGallery">
       {nodes.map(node => (
-        <GridItem href={node.link} rel="noopener" key={node.id}>
-          <SanityImage
-            {...node.image}
-            alt={node.alt}
-            style={{
-              objectFit: 'cover',
-              auto: 'format',
-            }}
-          />
-        </GridItem>
+        <div key={node.id} />
       ))}
     </Grid>
   )

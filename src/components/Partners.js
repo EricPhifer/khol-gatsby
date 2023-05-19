@@ -136,8 +136,9 @@ const Grid = styled.div`
   grid-template-columns: repeat(3, minmax(auto, 1fr));
   justify-items: center;
   overflow-x: auto;
-  @media only screen and (max-width: 700px) {
-    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
 `
 
