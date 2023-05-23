@@ -10,6 +10,9 @@ const Header = styled.header`
   z-index: 0;
   img {
     position: absolute;
+    @media only screen and (max-height: 400px) {
+      top: -5rem;
+    }
   }
   // Landscape view
   @media only screen and (max-height: 600px) {

@@ -131,6 +131,12 @@ const FullField = styled.fieldset`
       height: 0.5rem;
       background-color: var(--white);
     }
+    @media only screen and (max-width: 535px) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (max-width: 390px) {
+      font-size: 1.1rem;
+    }
   }
   .full select {
     min-width: 30rem;
@@ -140,6 +146,12 @@ const FullField = styled.fieldset`
     margin-left: 2rem;
     select {
       margin-left: 2rem;
+    }
+    @media only screen and (max-width: 500px) {
+      margin-left: 1rem;
+      select {
+        margin-left: 0;
+      }
     }
   }
 `

@@ -21,6 +21,7 @@ const GridItem = styled.a`
   height: 15rem;
   position: relative;
   border-radius: 0.5rem;
+  margin-bottom: 5rem;
   figcaption {
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--white);

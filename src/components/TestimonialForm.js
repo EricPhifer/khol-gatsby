@@ -22,6 +22,9 @@ const Form = styled.form`
     font-size: 5rem;
     text-align: center;
     margin-bottom: 3rem;
+    @media only screen and (max-width: 740px) {
+      font-size: 3.5rem;
+    }
   }
   button.submit {
     margin: 2rem 0;

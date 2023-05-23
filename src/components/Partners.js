@@ -184,7 +184,9 @@ export default function Partners() {
                     {...node.image}
                     alt={node.alt}
                     style={{
-                      objectFit: 'cover',
+                      width: '30rem',
+                      height: '30rem',
+                      objectFit: 'contain',
                       auto: 'format',
                     }}
                   />

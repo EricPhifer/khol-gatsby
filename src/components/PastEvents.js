@@ -85,8 +85,8 @@ const Card = styled.li`
 const Nav = styled(Link)`
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0.25rem 0.25rem 0.5rem 0;
-  padding: 1.5rem;
+  margin: 0.25rem 1rem 0.5rem 0;
+  padding: 2rem;
   display: inline-flex;
   position: relative;
   align-items: center;
@@ -106,6 +106,17 @@ const Nav = styled(Link)`
     background: var(--blue);
     color: var(--white);
   }
+  @media only screen and (max-width: 900px) {
+    margin: 0.25rem 2rem 0.5rem 0;
+    padding: 2.5rem;
+  }
+  @media only screen and (max-width: 350px) {
+    margin: 0.25rem 1rem 0.5rem 0;
+  }
+`
+
+const Container = styled.div`
+  overflow-y: auto;
 `
 
 const Content = styled.div`
@@ -150,11 +161,13 @@ export default function PastEvents() {
   const { nodes } = pastevents
   return (
     <Section id="carousels-card">
-      {nodes.map((node, index) => (
-        <Nav to={`/#card${index}`} key={node.id}>
-          {index + 1}
-        </Nav>
-      ))}
+      <Container>
+        {nodes.map((node, index) => (
+          <Nav to={`/#card${index}`} key={node.id}>
+            {index + 1}
+          </Nav>
+        ))}
+      </Container>
       <Slider>
         <Cards className="cards">
           {nodes.map((node, index) => (

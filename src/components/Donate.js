@@ -22,6 +22,7 @@ const Grid = styled.section`
 const GridItem = styled.a`
   width: 15rem;
   height: 15rem;
+  margin-bottom: 5rem;
   position: relative;
   display: flex;
   border-radius: 0.5rem;
