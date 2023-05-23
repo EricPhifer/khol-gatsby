@@ -37,7 +37,7 @@ const GridItem = styled.a`
 export default function Social() {
   const { social } = useStaticQuery(graphql`
     query {
-      social: allSanityDonate {
+      social: allSanitySocial {
         nodes {
           id
           alt
@@ -56,7 +56,7 @@ export default function Social() {
   return (
     <Grid id="threeColumnGallery">
       {nodes.map(node => (
-        <GridItem href={node.link} rel="noopener" key={node.id}>
+        <GridItem href={node.link} rel="noopener" target="_blank" key={node.id}>
           <SanityImage
             {...node.image}
             alt={node.alt}
