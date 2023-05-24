@@ -10,16 +10,23 @@ const PolicyStyles = styled.div`
   word-wrap: break-word;
   .overlord {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 7rem auto 0;
     background-color: #fff;
-    padding: 2rem;
+    padding: 2rem 2rem 15rem;
+    @media only screen and (max-width: 500px) {
+      padding: 2rem 2rem 18rem;
+    }
   }
   p:first-child {
     padding: 0;
     margin: 0;
   }
   h1 {
+    font-size: 5rem;
     text-align: center;
+  }
+  p {
+    padding: 0.5rem 0;
   }
   .policyContainer {
     max-width: 600px;

@@ -21,15 +21,8 @@ const GridItem = styled.a`
   height: 15rem;
   position: relative;
   border-radius: 0.5rem;
-  margin-bottom: 5rem;
-  figcaption {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--white);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 0.1rem 0.5rem;
-    border-radius: 0.5rem;
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 5rem;
   }
 `
 

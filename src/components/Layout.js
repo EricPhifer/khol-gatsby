@@ -9,7 +9,7 @@ const SiteStyles = styled.div`
   width: 100vw;
   min-height: 100vh;
   position: relative;
-  bottom: -3rem;
+  bottom: 0;
 `
 
 // eslint-disable-next-line react/prop-types

@@ -157,6 +157,7 @@ export default function StoryHero() {
               style={{
                 width: '100%',
                 height: '100%',
+                backgroundImage: 'fixed',
                 objectFit: 'cover',
                 auto: 'format',
               }}
