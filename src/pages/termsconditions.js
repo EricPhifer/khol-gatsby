@@ -24,6 +24,10 @@ const TermStyles = styled.div`
     padding: 0;
     margin: 0;
   }
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
   .termsContainer {
     max-width: 60rem;
     margin: 0 auto;

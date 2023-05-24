@@ -9,13 +9,16 @@ import Layout from '../components/Layout'
 const PolicyStyles = styled.div`
   word-wrap: break-word;
   .overlord {
-    max-width: 900px;
+    max-width: 90rem;
     margin: 7rem auto 0;
     background-color: #fff;
     padding: 2rem 2rem 15rem;
     @media only screen and (max-width: 500px) {
       padding: 2rem 2rem 18rem;
     }
+  }
+  p {
+    padding: 0.5rem 0;
   }
   p:first-child {
     padding: 0;
@@ -25,11 +28,8 @@ const PolicyStyles = styled.div`
     font-size: 5rem;
     text-align: center;
   }
-  p {
-    padding: 0.5rem 0;
-  }
   .policyContainer {
-    max-width: 600px;
+    max-width: 60rem;
     margin: 0 auto;
     padding: 0 1rem;
   }
