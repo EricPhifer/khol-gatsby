@@ -179,7 +179,7 @@ export default function Partners() {
           {nodes.map((node, index) => (
             <Logos className="logos" key={node.id}>
               <Logo className="logo" id={`#logo[${index}]`}>
-                <Image href={node.link} rel="noopener">
+                <Image href={node.link} rel="noopener" target="_blank">
                   <SanityImage
                     {...node.image}
                     alt={node.alt}

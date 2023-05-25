@@ -54,7 +54,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   margin: 0;
-  margin-bottom: 10rem;
+  margin-bottom: 7rem;
   font-family: 'Bodoni 72 Smallcaps';
   font-size: 8rem;
   line-height: 1;

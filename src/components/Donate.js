@@ -59,7 +59,7 @@ export default function Donate() {
   return (
     <Grid id="threeColumnGallery">
       {nodes.map(node => (
-        <GridItem href={node.link} rel="noopener" key={node.id}>
+        <GridItem href={node.link} rel="noopener" target="_blank" key={node.id}>
           <SanityImage
             {...node.image}
             alt={node.alt}

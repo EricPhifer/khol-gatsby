@@ -27,6 +27,7 @@ const TermStyles = styled.div`
   h1 {
     font-size: 5rem;
     text-align: center;
+    margin-bottom: 2rem;
   }
   .termsContainer {
     max-width: 60rem;
@@ -39,7 +40,7 @@ const TermStyles = styled.div`
   }
   // change from 7rem for banner
   @media only screen and (max-width: 900px) {
-    padding-top: 9rem;
+    margin: 0 auto;
   }
 `
 
