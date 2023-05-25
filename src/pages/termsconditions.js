@@ -38,9 +38,13 @@ const TermStyles = styled.div`
   h1 {
     text-align: center;
   }
-  // change from 7rem for banner
   @media only screen and (max-width: 900px) {
     margin: 0 auto;
+  }
+  @media only screen and (max-width: 450px) {
+    h1 {
+      font-size: 3rem;
+    }
   }
 `
 
