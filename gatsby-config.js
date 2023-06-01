@@ -22,6 +22,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-google-calendar',
+      options: {
+        calendarIds: ['calendar@kinnashouseoflove.com'],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-simple-analytics',
       options: {
         trackPageViews: true,

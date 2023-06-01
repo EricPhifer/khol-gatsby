@@ -11,6 +11,9 @@ const Grid = styled.section`
   grid-template-columns: repeat(2, minmax(auto, 1fr));
   gap: 1rem;
   justify-items: center;
+  iframe {
+    grid-column: 1 / span 3;
+  }
   @media only screen and (max-width: 688px) {
     grid-template-columns: 1fr;
   }
@@ -36,7 +39,7 @@ const GridItem = styled.a`
 export default function Social() {
   const { calendar } = useStaticQuery(graphql`
     query {
-      calendar: allSanityTestimonials {
+      calendar: allCalendarEvent {
         nodes {
           id
         }
@@ -46,6 +49,13 @@ export default function Social() {
   const { nodes } = calendar
   return (
     <Grid id="threeColumnGallery">
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=calendar%40kinnashouseoflove.com&ctz=America%2FChicago"
+        style={{ border: '0' }}
+        width="800"
+        height="600"
+        title="khol-calendar"
+      />
       {nodes.map(node => (
         <div key={node.id} />
       ))}
