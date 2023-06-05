@@ -13,19 +13,16 @@ const FlexContainer = styled.section`
   align-items: center;
 `
 
-const Iframe = styled.iframe`
-  width: 100%;
-  height: 60rem;
-  border: 0;
-`
-
 const FlexItem = styled.a`
   width: 100%;
   display: inline-flex;
   position: relative;
   padding: 4rem 2rem;
   border-radius: 0.5rem;
-  box-shadow: 0.1rem 0.1rem 0.5rem var(--darkgray);
+  &:hover {
+    border: 0.1rem solid var(--white);
+    box-shadow: 0.25rem 0.25rem 0.75rem var(--white);
+  }
 `
 
 const Date = styled.div`
@@ -38,17 +35,23 @@ const Date = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0.1rem 0.1rem 0.5rem var(--darkgray);
   font-size; 3rem;
+  background: var(--red);
+  color: var(--white);
 `
 
-const Day = styled.p`
+const Container = styled.div`
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
   font-size: 3rem;
   font-weight: 600;
 `
 
-const Month = styled.p`
-  font-size: 3rem;
-  font-weight: 600;
-`
+const Day = styled.p``
+
+const Month = styled.p``
+
+const DayofWeek = styled.span``
 
 const Year = styled.p`
   font-size: 1.5rem;
@@ -65,6 +68,12 @@ const Summary = styled.div`
   }
 `
 
+const Time = styled.h4`
+  font-size: 1.75rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+`
+
 export default function Social() {
   const { calendar } = useStaticQuery(graphql`
     query {
@@ -73,10 +82,12 @@ export default function Social() {
           id
           summary
           start {
+            date(formatString: "dddd")
             dateTime
             timeZone
           }
           end {
+            date(formatString: "dddd")
             dateTime
             timeZone
           }
@@ -87,24 +98,44 @@ export default function Social() {
       }
     }
   `)
+  // converts datetime from military to standard & moves time to CST timezone
+  function timeFormat(time, format) {
+    const parts = time.split(':')
+    let hour = parseInt(parts[0])
+    let suffix = ''
+    if (format === 'ampm') {
+      suffix = hour >= 12 ? 'pm' : 'am'
+      // hour += 6
+      hour = ((hour + 11) % 12) + 1
+    }
+    return `${`${hour}`.substring(-2)}:${parts[1]}${suffix}`
+  }
   const { nodes } = calendar
   return (
     <FlexContainer id="threeColumnGallery">
-      <Iframe
-        src="https://calendar.google.com/calendar/embed?src=calendar%40kinnashouseoflove.com&ctz=America%2FChicago"
-        title="khol-calendar"
-      />
       {nodes.map(node => (
-        <FlexItem key={node.id}>
+        <FlexItem
+          href={node.htmlLink}
+          rel="noopener noreferrer"
+          target="_blank"
+          key={node.id}
+        >
           <Date>
-            <Day>{node.start.dateTime.slice(5, 7)}</Day>/
-            <Month>{node.start.dateTime.slice(8, 10)}</Month>
-            <br />
+            <Container>
+              <Month>{node.start.dateTime.slice(5, 7)}</Month>/
+              <Day>{node.start.dateTime.slice(8, 10)}</Day>
+            </Container>
             <Year>{node.start.dateTime.slice(0, 4)}</Year>
           </Date>
           <Summary>
             <h3>{node.summary}</h3>
-            <p>{node.description}</p>
+            <Time>
+              <DayofWeek>{node.start.date} | </DayofWeek>
+              {node.allDay
+                ? 'All Day'
+                : `${timeFormat(node.start.dateTime.slice(-14, -9), 'ampm')} -
+              ${timeFormat(node.end.dateTime.slice(-14, -9), 'ampm')}`}
+            </Time>
           </Summary>
         </FlexItem>
       ))}

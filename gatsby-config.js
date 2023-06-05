@@ -25,6 +25,10 @@ module.exports = {
       resolve: 'gatsby-source-google-calendar',
       options: {
         calendarIds: ['calendar@kinnashouseoflove.com'],
+        timeMin: new Date().toISOString(),
+        maxResults: 10,
+        singleEvents: true,
+        orderBy: 'startTime',
       },
     },
     {
