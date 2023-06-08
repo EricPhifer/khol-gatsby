@@ -122,29 +122,8 @@ export default function Events() {
     return `${`${hour}`.substring(-2)}:${parts[1]}${suffix}`
   }
 
-  const getDateString = new window.Date(dates.start.dateTime.toString())
-  const convertToNumber = getDateString.getDay()
-  // TODO: this is not a good solution - currently always skips to default
-  function dayOfTheWeek(convert) {
-    switch (convert) {
-      case '0':
-        return 'Sunday'
-      case '1':
-        return 'Monday'
-      case '2':
-        return 'Tuesday'
-      case '3':
-        return 'Wednesday'
-      case '4':
-        return 'Thursday'
-      case '5':
-        return 'Friday'
-      case '6':
-        return 'Saturday'
-      default:
-        return 'Saturday'
-    }
-  }
+  const getWeekday = new window.Date(dates.start.dateTime.toString()).getDay()
+
   const { nodes } = calendar
   return (
     <FlexContainer id="threeColumnGallery">
@@ -165,7 +144,18 @@ export default function Events() {
           <Summary>
             <h3>{node.summary}</h3>
             <Time>
-              <DayofWeek>{dayOfTheWeek(convertToNumber)} | </DayofWeek>
+              <DayofWeek>
+                {{
+                  0: 'Sunday',
+                  1: 'Monday',
+                  2: 'Tuesday',
+                  3: 'Wednesday',
+                  4: 'Thursday',
+                  5: 'Friday',
+                  6: 'Saturday',
+                }[getWeekday] || null}{' '}
+                |{' '}
+              </DayofWeek>
               {node.allDay
                 ? 'All Day'
                 : `${timeFormat(node.start.dateTime.slice(-14, -9), 'ampm')} -
