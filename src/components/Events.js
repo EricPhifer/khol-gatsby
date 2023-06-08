@@ -74,8 +74,8 @@ const Time = styled.h4`
   padding-bottom: 0.5rem;
 `
 
-export default function Social() {
-  const { calendar } = useStaticQuery(graphql`
+export default function Events() {
+  const { calendar, dates } = useStaticQuery(graphql`
     query {
       calendar: allCalendarEvent {
         nodes {
@@ -96,19 +96,54 @@ export default function Social() {
           allDay
         }
       }
+      dates: calendarEvent {
+        id
+        start {
+          dateTime
+          timeZone
+        }
+        end {
+          dateTime
+          timeZone
+        }
+      }
     }
   `)
-  // converts datetime from military to standard & moves time to CST timezone
+
+  // converts datetime from military to standard
   function timeFormat(time, format) {
     const parts = time.split(':')
     let hour = parseInt(parts[0])
     let suffix = ''
     if (format === 'ampm') {
       suffix = hour >= 12 ? 'pm' : 'am'
-      // hour += 6
       hour = ((hour + 11) % 12) + 1
     }
     return `${`${hour}`.substring(-2)}:${parts[1]}${suffix}`
+  }
+
+  const getDateString = new window.Date(dates.start.dateTime.toString())
+  const convertToNumber = getDateString.getDay()
+  // TODO: this is not a good solution - currently always skips to default
+  function dayOfTheWeek(convert) {
+    switch (convert) {
+      case '0':
+        return 'Sunday'
+      case '1':
+        return 'Monday'
+      case '2':
+        return 'Tuesday'
+      case '3':
+        return 'Wednesday'
+      case '4':
+        return 'Thursday'
+      case '5':
+        return 'Friday'
+      case '6':
+        return 'Saturday'
+      default:
+        return 'Saturday'
+    }
   }
   const { nodes } = calendar
   return (
@@ -130,7 +165,7 @@ export default function Social() {
           <Summary>
             <h3>{node.summary}</h3>
             <Time>
-              <DayofWeek>{node.start.date} | </DayofWeek>
+              <DayofWeek>{dayOfTheWeek(convertToNumber)} | </DayofWeek>
               {node.allDay
                 ? 'All Day'
                 : `${timeFormat(node.start.dateTime.slice(-14, -9), 'ampm')} -
