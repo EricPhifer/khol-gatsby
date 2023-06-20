@@ -181,27 +181,28 @@ const MobileNav = styled.nav`
   position: relative;
   display: flex;
   flex-flow: column nowrap;
-  .contact {
-    position: absolute;
-    bottom: 0;
-    font-size: 2rem;
-    color: var(--white);
-    width: 100%;
-    padding: 2rem;
-    text-align: center;
-    background: var(--orange);
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      background: var(--white);
-      color: var(--orange);
-    }
-    &:focus {
-      background: var(--white);
-      color: var(--orange);
-    }
-  }
   @media only screen and (max-width: 600px) {
     width: 100%;
+  }
+`
+
+const Contact = styled.a`
+  position: absolute;
+  bottom: 0;
+  font-size: 2rem;
+  color: var(--white);
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+  background: var(--orange);
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: var(--white);
+    color: var(--orange);
+  }
+  &:focus {
+    background: var(--white);
+    color: var(--orange);
   }
 `
 
@@ -295,9 +296,14 @@ export default function Navigation() {
                 </Item>
               </List>
             ))}
-            <Link to={node.primelink} className="contact">
+            <Contact
+              href={node.primelink}
+              rel="noreferrer noopener"
+              target="_blank"
+              className="contact"
+            >
               {node.primetitle}
-            </Link>
+            </Contact>
           </Nav>
           <Mobile>
             <Img to="/#top">
@@ -334,9 +340,14 @@ export default function Navigation() {
                       </MobileItem>
                     ))}
                   </MobileList>
-                  <Link to={node.primelink} className="contact">
+                  <Contact
+                    href={node.primelink}
+                    rel="noreferrer noopener"
+                    target="_blank"
+                    className="contact"
+                  >
                     {node.primetitle}
-                  </Link>
+                  </Contact>
                 </MobileNav>
               </MenuContainer>
             </MenuToggle>
