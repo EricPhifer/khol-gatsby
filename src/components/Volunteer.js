@@ -180,6 +180,13 @@ export default function Volunteer() {
     email: '',
     phone: '',
     message: '',
+    over18: '',
+    referredby: '',
+    company: '',
+    organization: '',
+    members: '',
+    event: '',
+    consent: '',
   })
   const { contact, error, loading, errMessage, submitContact } = useContact({
     values,
@@ -239,7 +246,7 @@ export default function Volunteer() {
         <FullField>
           <label htmlFor="18" className="select show inline required">
             Are you 18 years or older?
-            <select name="18+[]">
+            <select name="over18">
               <option value="">---</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -262,7 +269,7 @@ export default function Volunteer() {
         <FullField>
           <label htmlFor="company" className="select show inline required">
             Are you a company, organization or group?
-            <select name="company[]">
+            <select name="company">
               <option value="">---</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -311,7 +318,7 @@ export default function Volunteer() {
             htmlFor="backgroundcheck"
             className="select show required full"
           >
-            <select name="consent[]">
+            <select name="consent">
               <option value="notparticipating">
                 I will not be participating in programs with children.
               </option>
