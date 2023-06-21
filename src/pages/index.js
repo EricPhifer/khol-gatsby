@@ -30,12 +30,6 @@ const Main = styled.main`
   position: relative;
   bottom: 3rem;
   padding: 3rem 0;
-  .events {
-    text-align: center;
-    h2 {
-      color: var(--blue);
-    }
-  }
   @media only screen and (max-width: 500px) {
     width: 98vw;
   }
@@ -72,15 +66,8 @@ const IndexPage = () => (
       <H2 id="partners">Our Partners</H2>
       <HR />
       <Partners />
-      <a
-        href="https://www.facebook.com/LadyJob1/events"
-        rel="noopener noreferrer"
-        target="_blank"
-        className="events"
-      >
-        <H2 id="events">Upcoming Events</H2>
-        <HR />
-      </a>
+      <H2 id="events">Upcoming Events</H2>
+      <HR />
       <Events />
       <H2>Past Events</H2>
       <HR />
