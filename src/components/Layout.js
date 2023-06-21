@@ -14,7 +14,7 @@ const SiteStyles = styled.div`
 
 // eslint-disable-next-line react/prop-types
 export default function Layout({ children }) {
-  return (
+  return typeof window !== 'undefined' ? (
     <>
       <GlobalStyles />
       <Typography />
@@ -24,5 +24,5 @@ export default function Layout({ children }) {
         <Copyright />
       </SiteStyles>
     </>
-  )
+  ) : null
 }

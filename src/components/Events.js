@@ -122,7 +122,7 @@ export default function Events() {
     return `${`${hour}`.substring(-2)}:${parts[1]}${suffix}`
   }
 
-  const getWeekday = new window.Date(dates.start.dateTime.toString()).getDay()
+  const dayOfWeek = new window.Date(dates.start.dateTime).getDay()
 
   const { nodes } = calendar
   return (
@@ -153,7 +153,7 @@ export default function Events() {
                   4: 'Thursday',
                   5: 'Friday',
                   6: 'Saturday',
-                }[getWeekday] || null}{' '}
+                }[dayOfWeek] || null}{' '}
                 |{' '}
               </DayofWeek>
               {node.allDay

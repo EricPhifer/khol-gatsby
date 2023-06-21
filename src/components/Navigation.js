@@ -187,7 +187,6 @@ const MobileNav = styled.nav`
 `
 
 const Contact = styled.a`
-  position: absolute;
   bottom: 0;
   font-size: 2rem;
   color: var(--white);
