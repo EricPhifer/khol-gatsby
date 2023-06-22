@@ -203,6 +203,9 @@ const Contact = styled.a`
     background: var(--white);
     color: var(--orange);
   }
+  @media only screen and (max-width: 815px) {
+    position: absolute;
+  }
 `
 
 const MobileList = styled.ul`
