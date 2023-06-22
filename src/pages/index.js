@@ -15,6 +15,7 @@ import Volunteer from '../components/Volunteer'
 import PastEvents from '../components/PastEvents'
 import Testimonials from '../components/Testimonials'
 import TestimonialForm from '../components/TestimonialForm'
+import Board from '../components/Board'
 
 const Hero = styled.div`
   display: block;
@@ -63,6 +64,9 @@ const IndexPage = () => (
       <H2 id="about">About Us</H2>
       <HR />
       <About />
+      <H2 id="board">Board Members</H2>
+      <HR />
+      <Board />
       <H2 id="partners">Our Partners</H2>
       <HR />
       <Partners />
@@ -83,9 +87,6 @@ const IndexPage = () => (
       <HR />
       <Connect />
       <Social />
-      <H2 id="donate">Donate</H2>
-      <HR />
-      <Donate />
     </Main>
   </Layout>
 )
