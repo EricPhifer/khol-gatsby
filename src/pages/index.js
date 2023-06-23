@@ -6,12 +6,8 @@ import Layout from '../components/Layout'
 import StoryHero from '../components/StoryHero'
 // Body Components
 import About from '../components/About'
-import Social from '../components/Social'
 import Events from '../components/Events'
-import Donate from '../components/Donate'
-import Connect from '../components/Connect'
 import Partners from '../components/Partners'
-import Volunteer from '../components/Volunteer'
 import PastEvents from '../components/PastEvents'
 import Testimonials from '../components/Testimonials'
 import TestimonialForm from '../components/TestimonialForm'
@@ -80,13 +76,6 @@ const IndexPage = () => (
       <HR />
       <Testimonials />
       <TestimonialForm />
-      <H2 id="volunteer">Volunteer</H2>
-      <HR />
-      <Volunteer />
-      <H2 id="connect">Connect</H2>
-      <HR />
-      <Connect />
-      <Social />
     </Main>
   </Layout>
 )

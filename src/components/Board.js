@@ -2,7 +2,6 @@ import { PortableText, defaultComponents } from '@portabletext/react'
 import { graphql, useStaticQuery } from 'gatsby'
 import SanityImage from 'gatsby-plugin-sanity-image'
 import * as React from 'react'
-// import { FaCaretLeft, FaCaretRight } from 'react-icons/fa'
 import styled from 'styled-components'
 
 const Section = styled.section`
