@@ -85,12 +85,7 @@ export default function TestimonialForm() {
     return <p>{errMessage}</p>
   }
   return (
-    <Form
-      method="post"
-      netlify-honeypot="bot-field"
-      data-netlify="true"
-      name="testimonial"
-    >
+    <Form method="post" netlify-honeypot="bot-field" netlify name="testimonial">
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="testimonial" />
       <legend>Share With Others How We Have Impacted Your Life</legend>

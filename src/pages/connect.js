@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 
+// Body Components
 import Connect from '../components/Connect'
 import Social from '../components/Social'
 
