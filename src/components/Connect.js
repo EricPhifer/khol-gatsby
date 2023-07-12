@@ -118,7 +118,13 @@ export default function Connect() {
     return <p>{errMessage}</p>
   }
   return (
-    <Form method="post" netlify-honeypot="bot-field" netlify name="contact">
+    <Form
+      method="post"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+      netlify
+      name="contact"
+    >
       <input type="hidden" name="bot-field" />
       <input type="hidden" name="form-name" value="contact" />
       <FullField className="nameEmail">

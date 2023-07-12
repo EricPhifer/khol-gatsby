@@ -201,7 +201,7 @@ export default function Volunteer() {
       <Form
         method="post"
         netlify-honeypot="bot-field"
-        netlify
+        data-netlify="true"
         name="volunteers"
       >
         <input type="hidden" name="bot-field" />
